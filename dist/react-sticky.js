@@ -448,6 +448,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var bottomLimit = this.state.distanceFromBottom - this.state.height - this.props.bottomOffset;
 	        if (this.state.containerOffset > bottomLimit) {
 	          _stickyStyle.top = bottomLimit;
+	          className += ' ' + this.props.bottomClassName;
 	        }
 
 	        placeholderStyle.paddingBottom = this.state.height;
@@ -486,6 +487,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  className: _react2.default.PropTypes.string,
 	  style: _react2.default.PropTypes.object,
 	  stickyClassName: _react2.default.PropTypes.string,
+	  bottomClassName: _react2.default.PropTypes.string,
 	  stickyStyle: _react2.default.PropTypes.object,
 	  topOffset: _react2.default.PropTypes.number,
 	  bottomOffset: _react2.default.PropTypes.number,
@@ -496,6 +498,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  className: '',
 	  style: {},
 	  stickyClassName: 'sticky',
+	  bottomClassName: '',
 	  stickyStyle: {},
 	  topOffset: 0,
 	  bottomOffset: 0,
