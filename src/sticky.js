@@ -8,6 +8,7 @@ export default class Sticky extends React.Component {
     className: React.PropTypes.string,
     style: React.PropTypes.object,
     stickyClassName: React.PropTypes.string,
+    bottomClassName: React.PropTypes.string,
     stickyStyle: React.PropTypes.object,
     topOffset: React.PropTypes.number,
     bottomOffset: React.PropTypes.number,
@@ -19,6 +20,7 @@ export default class Sticky extends React.Component {
     className: '',
     style: {},
     stickyClassName: 'sticky',
+    bottomClassName: '',
     stickyStyle: {},
     topOffset: 0,
     bottomOffset: 0,
@@ -178,6 +180,7 @@ export default class Sticky extends React.Component {
       const bottomLimit = this.state.distanceFromBottom - this.state.height - this.props.bottomOffset;
       if (this.state.containerOffset > bottomLimit) {
         stickyStyle.top = bottomLimit;
+        className += ` ${this.props.bottomClassName}`;
       }
 
       placeholderStyle.paddingBottom = this.state.height;
