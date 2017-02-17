@@ -109,7 +109,7 @@ export default class Sticky extends React.Component {
     if (hasChanged) {
       if (this.channel) {
         this.channel.update((data) => {
-          data.offset = (isSticky ? this.state.height : 0);
+          data.offset = (isSticky ? height : 0);
         });
       }
 
