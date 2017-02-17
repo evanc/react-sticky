@@ -302,7 +302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (hasChanged) {
 	        if (_this.channel) {
 	          _this.channel.update(function (data) {
-	            data.offset = isSticky ? _this.state.height : 0;
+	            data.offset = isSticky ? height : 0;
 	          });
 	        }
 
