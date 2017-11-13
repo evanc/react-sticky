@@ -193,6 +193,7 @@ export default class Sticky extends React.Component {
       topOffset,
       isActive,
       stickyClassName,
+      bottomClassName,
       stickyStyle,
       bottomOffset,
       onStickyStateChange,
